@@ -1,0 +1,153 @@
+/* MOBILE */
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+  :root{
+    --cyan: hsl(179, 62%, 43%);
+    --l-cyan: hsla(179, 62%, 43%, 0.86); 
+    --b-yellow: hsl(71, 73%, 54%);
+    --l-gray: hsl(204, 43%, 93%);
+    --g-blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  .c-cyan{color: var(--cyan);}
+  .c-b-yellow{color: var(--b-yellow);}
+  .c-l-gray{color: var(--l-gray);}
+  .c-g-blue{color: var(--g-blue);}
+  .c-white{color: var(--white);}
+
+  .bg-cyan{background-color: var(--cyan);}
+  .bg-l-cyan{background-color: var(--l-cyan);}
+  .bg-b-yellow{background-color: var(--b-yellow);}
+  .bg-l-gray{background-color: var(--l-gray);}
+  .bg-g-blue{background-color: var(--g-blue);}
+  .bg-white{background-color: var(--white);}
+
+  html{
+    font-size: 16px;
+    font-family: "Karla";
+  }
+
+  .fw-400{font-weight: 400;}
+  .fw-700{font-weight: 700;}
+  
+  body{
+    padding: 4em 1.3em;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .main-card{
+    overflow: hidden;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "sec1"
+    "sec2"
+    "sec3";
+  }
+
+  .sec1{grid-area: sec1;}
+  .sec2{grid-area: sec2;}
+  .sec3{grid-area: sec3;}
+
+  section{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+  }
+  .title{
+    font-size: 1.2rem;
+    margin-top: 0.4em;
+  }
+
+  .subtitle{
+    font-size: 0.9rem;
+    line-height: 1.3em;
+  }
+
+  .desc{
+    font-size: 0.87em;
+    line-height: 1.9em;
+    margin: 0.3em 0;
+  }
+
+  .price{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-inline-end: 0.3em; /*yatay,elementin sonuna margin*/
+    vertical-align: middle; /*priceları ortalasın diye*/
+  }
+
+  .btn{
+    border: none;
+    padding-block: 1.1em;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1em;
+    box-shadow: 0px 10px 12px 6px hsl(218, 22% 67%);
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin-block: 0;
+  }
+  
+  ul li{
+    font-size: 0.9rem;
+    line-height: 1.4em;
+    margin-bottom: 0;
+  }
+
+/*DESKTOP*/
+
+@media only screen and (min-width: 636px){
+
+    body{
+        padding: 0;
+        display: grid;
+        place-content: center;
+    }
+
+    .main-card{
+        max-width: 635px;
+        border-radius: 7px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "sec1 sec1"
+        "sec2 sec3";
+        box-shadow: 10px 15px 9px hsl(218deg 22% 67% / 27%)
+    }
+
+    section{
+        padding: 2.5em;
+    }
+    
+    .sec1 .title{
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .sec1 .subtitle{
+        font-size: 1.1rem;
+        margin-block: 0;
+    }
+
+    .sec1 p{
+        font-size: 1rem;
+        line-height: 1.6em;
+        margin-top: 0.6em;
+    }
+
+    .price-sec{
+        margin: 0;
+    }
+
+    .price-desc{
+        margin-top: 0.2;
+    }
+}
